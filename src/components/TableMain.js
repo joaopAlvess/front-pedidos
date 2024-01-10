@@ -1,11 +1,12 @@
 import React from 'react'
 import { Container, Table } from 'react-bootstrap'
+import './styles/TableMain.css'
 
 const TableMain = () => {
     return (
-        <Container>
-            <Table striped bordered hover variant="dark">
-                <thead>
+        <div className='box-table'>
+            <Container>
+                <table>
                     <tr>
                         <th>#</th>
                         <th>ID</th>
@@ -14,19 +15,20 @@ const TableMain = () => {
                         <th>Endereço</th>
                         <th>Produto</th>
                         <th>Total</th>
-
                     </tr>
-                </thead>
-                <tbody>
                     <tr>
                         <td>1</td>
                         <td>Mark</td>
-                        <td>Otto</td>
+                        <td></td>
                         <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td></td>
+                        <td></td>
                     </tr>
-                </tbody>
-            </Table>
-        </Container>
+                </table>
+                
+            </Container>
+        </div>
     )
 }
 

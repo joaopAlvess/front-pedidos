@@ -1,10 +1,12 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
+import './styles/NavBar.css'
 
 const NavBar = () => {
     return (
         <>
-            <Navbar bg="light" data-bs-theme="light">
+        <div className='header'>
+            <Navbar>
                 <Container>
                     <Nav className="me-auto">
                         <Nav.Link href="#home">Clientes</Nav.Link>
@@ -12,6 +14,7 @@ const NavBar = () => {
                     </Nav>
                 </Container>
             </Navbar>
+        </div>
         </>
     )
 }
