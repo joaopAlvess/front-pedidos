@@ -1,11 +1,14 @@
 import React from 'react'
-import { Button, Container } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
+import './styles/ButtonsOne.css'
 
 const ButtonsOne = () => {
     return (
         <>
-            <Button variant="success">Cadastrar</Button>
-            <Button variant="warning">Desabilitar Clientes</Button>
+            <div className='bt-one'>
+                <Button variant="success">Cadastrar Clientes</Button>
+                <Button variant="warning">Desabilitar Clientes</Button>
+            </div>
         </>
 
     )

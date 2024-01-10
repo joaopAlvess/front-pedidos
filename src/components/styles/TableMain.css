@@ -1,10 +1,14 @@
 .box-table{
-    width: 500px;
+    width: 900px;
     height: 300px;
     border: 1px solid;
     border-radius: 10px;
     background-color: #f0f0f0;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
 }
 
 .table-custom {
@@ -13,4 +17,9 @@
 
 .table-custom th, .table-custom td {
     width: 100px;
+}
+
+.table-head{
+    background-color: #9e9d9d;
+    margin-bottom: 10px;
 }

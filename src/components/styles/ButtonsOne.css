@@ -1,0 +1,8 @@
+.bt-one {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    gap: 560px;
+    margin-bottom: 10px;
+}
