@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './routes/Home';
 import Produtos from './routes/Produtos';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 // Configurando o Router
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/> 
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

@@ -1,17 +1,15 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
+import NavBar from '../components/NavBar'
+import ButtonsOne from '../components/ButtonsOne'
+import TableMain from '../components/TableMain'
 
 const Home = () => {
     return (
         <>
-            <div>
-                <p> Clientes </p>
-                <p> Produtos </p>
-            </div>
-            <div>
-                <Button variant="success">Cadastrar</Button>
-                <Button variant="warning">Desabilitar Clientes</Button>
-            </div>
+            <NavBar/>
+            <ButtonsOne />
+            <TableMain />
         </>
     )
 }
