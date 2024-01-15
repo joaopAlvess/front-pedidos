@@ -2,30 +2,25 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import './styles/TableMain.css'
 
-const TableMain = () => {
+const TableMain = ({ headers, data }) => {
     return (
         <div className='box-table'>
             <Container>
                 <table className='table-custom'>
                     <thead className='table-head'>
                         <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>Telefone</th>
-                            <th>Endereço</th>
-                            <th>Produto</th>
-                            <th>Total</th>
+                            {headers.map((header, index) => (
+                                <th key={index}>{header}</th>
+                            ))}
                         </tr>
                     </thead>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td></td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                               {data.map((item, index)=> (
+                                <td key={index}>{item}</td>
+                               ))}
+                        </tr>
+                    </tbody>
                 </table>
 
             </Container>
