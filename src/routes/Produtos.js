@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+
 import NavBar from '../components/NavBar'
 import TableMain from '../components/TableMain'
 import ButtonsTwo from '../components/ButtonsTwo'
 import { Button } from 'react-bootstrap'
 
+
 const Produtos = () => {
   const headers = ['ID', 'Nome Produto', 'Valor']
   const data = ['1', 'Mark', '72.5'];
 
-  const [open, setOpen] = useState(false);
   return (
     <>
       <NavBar />
@@ -18,6 +18,7 @@ const Produtos = () => {
       </div>
       < TableMain headers={headers} data={data} />
       <ButtonsTwo />
+
     </>
   )
 }
