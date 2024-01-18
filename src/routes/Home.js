@@ -3,9 +3,14 @@ import NavBar from '../components/NavBar'
 import { Button } from 'react-bootstrap'
 import CadastroModal from '../components/CadastroModal'
 import apiPedidos from '../services/apiPedidos'
+import {
+    BiSolidCopyAlt, BiSolidZoomOut, BiNotepad,
+    BiSolidXSquare, BiSolidUser,
+} from "react-icons/bi";
+import { FaShoppingBag } from "react-icons/fa";
 
 import '../components/styles/Home.css'
-import '../components/styles/ButtonsOne.css'
+
 
 
 
@@ -30,43 +35,55 @@ const Home = () => {
         <>
             <NavBar />
             <div className='menu-lateral'>
-                <a href='/'>Clientes</a>
-                <a href='/produtos'>Produtos</a>
+                <a href='/'>
+                    <BiSolidUser style={{ marginBottom: '5px', fontSize: '40px'}}/> Clientes</a>
+                <a href='/produtos'>
+                    <FaShoppingBag style={{ marginBottom: '5px', fontSize: '40px'}}/> Produtos</a>
             </div>
 
-            <div className='box-buttons'>
-                <div className='bt-one'>
-                    <Button variant="success" onClick={handleShow}>Cadastro Cliente</Button>
-                    <Button variant="warning">Desabilitar Cliente</Button>
-                </div>
-                <div className='bt-two'>
-                    <Button variant="info">Imprimir Relatórios</Button>
-                    <Button variant="danger">Excluir Registros</Button>
-                </div>
-            </div>
+            <div className='container'>
 
-            <div className='box-table'>
+                <div className='box-buttons'>
+                    <div className='bt-one'>
+                        <button style={{ borderRadius: '5px', borderColor: '#547a32', color: '#547a32', padding: '20px', fontSize: '17px', fontWeight: 'bold' }}>
+                            <BiSolidCopyAlt style={{ marginRight: '5px', fontSize: '40px'}}/> Cadastro Cliente
+                        </button>
+                        <button style={{ borderRadius: '5px', borderColor: '#f7cc0a', color: '#f7cc0a', padding: '20px', fontSize: '17px', fontWeight: 'bold' }}>
+                            <BiSolidZoomOut style={{ marginRight: '5px', fontSize: '40px'}}/> Desabilitar Cliente
+                        </button>
+                        <button style={{ borderRadius: '5px', borderColor: '#2776f5', color: '#2776f5', padding: '20px', fontSize: '17px', fontWeight: 'bold' }}>
+                            <BiNotepad style={{ marginRight: '5px', fontSize: '40px'}}/> Imprimir Relatório
+                        </button>
+                        <button style={{ borderRadius: '5px', borderColor: '#eb141', color: '#eb1410', padding: '20px', fontSize: '17px', fontWeight: 'bold' }}>
+                            <BiSolidXSquare style={{ marginRight: '5px', fontSize: '40px'}}/> Excluir Registros
+                        </button>
 
-                <table className='table-custom'>
-                    <thead className='table-head'>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nome</th>
-                            <th>Telefone</th>
-                            <th>Endereço</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {clientes.map((item, index) => (
-                            <tr key={index}>
-                                <td>{item.id}</td>
-                                <td>{item.nome}</td>
-                                <td>{item.telefone}</td>
-                                <td>{item.endereco}</td>
+                    </div>
+                </div>
+
+                <div className='box-table'>
+
+                    <table className='table-custom'>
+                        <thead className='table-head'>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome</th>
+                                <th>Telefone</th>
+                                <th>Endereço</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {clientes.map((item, index) => (
+                                <tr key={index}>
+                                    <td>{item.id}</td>
+                                    <td>{item.nome}</td>
+                                    <td>{item.telefone}</td>
+                                    <td>{item.endereco}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <CadastroModal
                 show={open}
@@ -77,4 +94,6 @@ const Home = () => {
     )
 }
 
+
 export default Home
+

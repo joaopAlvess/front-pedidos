@@ -11,20 +11,27 @@
     flex-direction: column;
     justify-content: center;
     background-color: #b8dedb;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.menu-lateral:hover {
+    height: 100vh;
 }
 
 .menu-lateral a {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: black;
     padding: 10px 0;
-   
+    align-items: center;
 }
 
 
 /*ESTILIZAÇÃO TABELA*/
 
-.box-table{
+.box-table {
     width: 1100px;
     height: 500px;
     border: 1px solid;
@@ -42,11 +49,12 @@
     margin: 0;
 }
 
-.table-custom th, .table-custom td {
+.table-custom th,
+.table-custom td {
     width: 100px;
 }
 
-.table-head{
+.table-head {
     margin-bottom: 10px;
 }
 
@@ -58,4 +66,15 @@
     width: 1100px;
     border: 1px solid;
     border-radius: 10px;
+    margin-bottom: 60px;
+}
+
+.bt-one {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 18px;
+    margin-bottom: 18px;
 }
